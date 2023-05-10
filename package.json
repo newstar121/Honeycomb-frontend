@@ -23,11 +23,15 @@
     "@types/react-redux": "^7.1.9",
     "axios": "^0.25.0",
     "bignumber.js": "^9.0.0",
+    "child_process": "^1.0.2",
     "clsx": "^1.1.1",
     "ethers": "^5.4.1",
+    "fs": "^0.0.1-security",
     "material-ui-image": "^3.3.2",
     "moment": "^2.29.1",
     "numeral": "^2.0.6",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
     "react": "^16.13.1",
     "react-circular-progressbar": "^2.0.3",
     "react-countdown": "^2.2.1",
@@ -46,8 +50,8 @@
     "web3": "^1.2.11"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "CI= GENERATE_SOURCEMAP=false react-scripts build",
+    "start": "node src/store/actions/act.js && export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "CI= GENERATE_SOURCEMAP=false  export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
